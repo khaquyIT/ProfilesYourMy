@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiles-Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        box-sizing: border-box;
+        background-color: #081C29;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100vh;
+    }
+
+    #text {
+        width: 100%;
+        height: 50px;
+        color: #249DCF;
+        font-size: 1.5rem;
+    }
+
+    .homePage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        box-shadow: rgba(red, green, blue, alpha);
+        object-fit: cover;
+        -webkit-box-shadow: 0px 2px 12px 4px #249DCF;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu ul {
+        display: flex;
+        justify-content: space-evenly;
+        font-family: Arial;
+        margin-right: 30px;
+    }
+
+    li {
+        list-style: none;
+        padding: 0 20px;
+    }
+
+    img:hover {
+        box-shadow: 0px 5px 20px 7px #249DCF;
+        opacity: 0.6;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: white;
+        transition: 0.4s ease;
+    }
+
+    h3 {
+        font-size: 20px;
+        color: #249DCF;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    #listMenu {
+        margin-top: 45px;
+    }
+
+    .menu li a:hover {
+        color: #249DCF;
+    }
+
+    .close {
+        position: fixed;
+        right: 4%;
+        bottom: 0;
+        top: 6%;
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+
+    .bar i {
+        font-size: 25px;
+        display: block;
+        color: #249DCF;
+        cursor: pointer;
+    }
+
+    .menu__moblie {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: #081C29;
+        width: 60%;
+        transform: translateX(100%);
+        transition: 0.2s linear;
+    }
+
+    .opacityy {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none;
+        transition: 0.3s linear;
+    }
+
+    .checkbox:checked~.opacityy {
+        display: block;
+    }
+
+    .checkbox:checked~.menu__moblie {
+        transform: translateX(0);
+    }
+
+    .menu__mobile__right {
+        position: fixed;
+        right: 50%;
+        margin-top: 100px;
+    }
+
+    .menu__mobile__right li a {
+        text-decoration: none;
+        color: #249DCF;
+        right: 0;
+    }
+
+    .menu__mobile__right li {
+        padding: 20px 0px;
+    }
+
+    .close__icon i {
+        color: #249DCF;
+        position: absolute;
+        left: 10%;
+        top: 5%;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    @media only screen and (max-width: 46.1875em) {
+        .container {
+            padding: 0px 0px;
+            height: 100vh;
+        }
+
+        .close {
+            display: block;
+        }
+
+        #listMenu {
+            display: none;
+        }
+
+        .homePage {
+            text-align: center;
+        }
+
+        .copyrighted {
+            text-align: center;
+            line-height: 1.4;
+        }
+    }
+
+    @media only screen and (min-width: 46.25em) and (max-width:63.9375em) {
+        .container {
+            padding: 0px 0px;
+            height: 100vh;
+        }
+
+        .close {
+            display: block;
+        }
+
+        #listMenu {
+            display: none;
+        }
+
+        .homePage {
+            text-align: center;
+        }
+
+
+    }
+
+    .copyrighted {
+        width: 100%;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: #249DCF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .copyrighted i {
+        font-size: 12px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <p id="text"></p>
+            </ul>
+            <ul id="listMenu">
+                <li><a href="family.html">Gia đình</a></li>
+                <li><a href="interest.html">Sở thích</a></li>
+                <li><a href="ConnectWithQuy.html">Kết nối</a></li>
+                <li><a href="">Lí lịch</a></li>
+                <li><a href="other.html">Khác</a></li>
+            </ul>
+        </div>
+        <label class="close">
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <input type="checkbox" class="checkbox">
+            <div class="opacityy"></div>
+
+            <div class="menu__moblie">
+                <div class="close__icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <ul class="menu__mobile__right">
+                    <li><a href="family.html">Gia đình</a></li>
+                    <li><a href="">Sở thích</a></li>
+                    <li><a href="ConnectWithQuy.html">Kết nối</a></li>
+                    <li><a href="">Lí lịch</a></li>
+                    <li><a href="other.html">Khác</a></li>
+                </ul>
+            </div>
+        </label>
+        <div class="homePage">
+            <div class="homePage__itMe">
+                <img src="Imager/me.jpg" alt="">
+                <h3>Hồ Khả Quý</h3>
+                <h3>-Fontend Developer-</h3>
+            </div>
+        </div>
+        <div class="copyrighted">
+            <p><i class="fa-solid fa-copyright"></i> Hồ Khả Quý, Khoa Công nghệ thông tin, Đại học Khoa Học Huế.</p>
+        </div>
+    </div>
+    <script>
+        const text = document.getElementById('text');
+        const textDisplay = 'Hi Everyone....';
+        function sliderText() {
+            for (let i = 0; i < textDisplay.length; i++) {
+                setTimeout(() => {
+                    text.innerHTML += textDisplay.charAt(i);
+                }, i * 100)
+            }
+            text.innerHTML = '';
+        }
+        setInterval(sliderText, 2000);
+    </script>
+
+</body>

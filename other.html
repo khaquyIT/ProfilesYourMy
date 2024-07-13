@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            background-color: #081C29;
+            height: 100vh;
+            font-size: 20px;
+            font-family: Arial;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .question__answer {
+            width: 100%;
+            width: 900px;
+        }
+
+        .question {
+            background-color: #414141;
+            display: inline-block;
+            max-width: 900px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: 0.6s ease;
+        }
+
+        .question:hover {
+            background-color: gray;
+        }
+
+        .question p {
+            line-height: 60px;
+            margin-left: 20px;
+        }
+
+        .answer {
+            background-color: #414141;
+            width: 100%;
+            max-width: 900px;
+            height: max-content;
+            display: none;
+            margin-top: -13px;
+            margin-bottom: 20px;
+            animation: height 0.3s linear;
+            transform-origin: left top;
+        }
+
+        @keyframes height {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .answer p {
+            margin-left: 20px;
+            padding: 10px 0;
+        }
+
+        .plus,
+        .close {
+            position: absolute;
+            right: 3%;
+            top: 25%;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .close {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="question__answer">
+                <div class="question">
+                    <p>Ngày tháng năm sinh của Quý ?</p>
+                    <span class="plus"><i class="fa-solid fa-plus"></i></span>
+                    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="answer">
+                    <p>
+                        22/09/2004
+                    </p>
+                </div>
+            </div>
+            <div class="question__answer">
+                <div class="question">
+                    <p>Mối quan hệ ?</p>
+                    <span class="plus"><i class="fa-solid fa-plus"></i></span>
+                    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="answer">
+                    <p>
+                        Độc thân
+                    </p>
+                </div>
+            </div>
+            <div class="question__answer">
+                <div class="question">
+                    <p>Quý có sở thích gì ?</p>
+                    <span class="plus"><i class="fa-solid fa-plus"></i></span>
+                    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="answer">
+                    <p>
+                        Nghe nhạc <br>
+                        Xem phim Trung Quốc cổ trang <br>
+                    </p>
+                </div>
+            </div>
+            <div class="question__answer">
+                <div class="question">
+                    <p>Định hướng tương lai như thế nào ?</p>
+                    <span class="plus"><i class="fa-solid fa-plus"></i></span>
+                    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="answer">
+                    <p>
+                        Trở thành một software Engineer
+                    </p>
+                </div>
+            </div>
+            <div class="question__answer">
+                <div class="question">
+                    <p>Quý là một người như thế nào ?</p>
+                    <span class="plus"><i class="fa-solid fa-plus"></i></span>
+                    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="answer">
+                    <p>
+                        Vui vẻ
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const questions = document.querySelectorAll('.question');
+        const answers = document.querySelectorAll('.answer');
+        const closeIcons = document.querySelectorAll('.close');
+        const plusIcons = document.querySelectorAll('.plus');
+
+
+
+
+
+        questions.forEach((value, i) => {
+            value.addEventListener('click', () => {
+                answers.forEach((answer, j) => {
+                    if (i === j) {
+                        if (answer.style.display === 'block') {
+
+                            answer.style.display = 'none';
+                            plusIcons[i].style.display = 'block';
+                            closeIcons[i].style.display = 'none';
+                        } else {
+                            answer.style.display = 'block';
+                            plusIcons[i].style.display = 'none';
+                            closeIcons[i].style.display = 'block';
+                        }
+                    } else {
+                        answer.style.display = 'none';
+                        plusIcons[j].style.display = 'block';
+                        closeIcons[j].style.display = 'none';
+                    }
+                });
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

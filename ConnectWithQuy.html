@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #081C29;
+        }
+
+        .internet {
+            width: 100%;
+            max-width: 1200px;
+            height: 100vh;
+            margin: 0 auto;
+        }
+
+        .facebook,
+        .githup,
+        .gmail,
+        .tiktok {
+            position: relative;
+        }
+
+        .content__fb,
+        .content__tiktok {
+            position: fixed;
+            left: 22%;
+            bottom: 20%;
+            width: 900px;
+            height: 450px;
+            border-radius: 12px;
+            background-color: white;
+            transition: 0.3s linear;
+            transform: translateY(-160%);
+        }
+
+        .internet__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            font-size: 50px;
+        }
+
+        .internet__icon div i {
+            padding: 0 30px;
+            cursor: pointer;
+            color: #249DCF;
+            transition: 0.5s linear;
+        }
+
+        .internet__icon div :hover {
+            font-size: 60px;
+
+        }
+
+        .selector {
+            margin-top: 50px;
+            text-align: center;
+
+            /* display: flex;
+            justify-content: space-around; */
+        }
+
+        .selector button {
+            padding: 0 20px;
+        }
+
+        .content__facebook p,
+        .content__tiktok p {
+            text-align: center;
+            font-size: 16px;
+            color: black;
+            font-family: Arial;
+            line-height: 1.5;
+        }
+
+        .content__facebook button,
+        .content__tiktok button {
+            width: 160px;
+            height: 50px;
+            background-color: #249DCF;
+            color: #081C29;
+            object-fit: cover;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0px 2px 23px 5px #249DCF;
+            margin: 0 10px;
+        }
+
+        @media only screen and (max-width: 46.1875em) {
+            .internet__icon {
+                display: flex;
+                width: 50%;
+                flex-wrap: wrap;
+                font-size: 60px;
+                text-align: center;
+                margin-left: 100px;
+            }
+
+            .internet__icon div {
+                padding-bottom: -20px;
+            }
+
+        }
+
+        @media only screen and (min-width: 46.25em) and (max-width:63.9375em) {}
+    </style>
+</head>
+
+<body>
+    <div class="internet">
+        <div class="opacity"></div>
+        <div class="internet__icon">
+            <div class="facebook">
+                <a href="https://www.facebook.com/profile.php?id=100011488594323"><i
+                        class="fa-brands fa-facebook"></i></a>
+
+            </div>
+            <div class="tiktok">
+                <a href="https://www.tiktok.com/@khaquy2209"><i class="fa-brands fa-tiktok"></i></a>
+
+            </div>
+            <div class="gmail">
+                <a href="https://mail.google.com/mail/u/0/?pli=1#inbox"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+            <div class="githup">
+                <a href="https://github.com/khaquyIT"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="content__fb">
+            <div class="close__icon">
+                <i style="color: #249DCF; font-size: 20px; margin-left: 20px; margin-top: 20px; cursor: pointer;"
+                    class="fa-solid fa-xmark"></i>
+
+            </div>
+            <div class="content__facebook">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur <br>
+                    adipisicing elit. Excepturi asperiores <br>
+                    fugiat voluptate vitae iure in, velit <br>
+                    debitis magni amet nostrum modi. Asperiores <br>
+                    obcaecati velit, enim laudantium ipsum magni <br>
+                    voluptatibus doloremque!
+                </p>
+                <div class="selector">
+                    <button id="exit">Quay lại</button>
+                    <button><a href="https://www.facebook.com/profile.php?id=100011488594323">Đi đến
+                            facebook</a></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="content__tiktok">
+            <div class="close__icon">
+                <i style="color: #249DCF; font-size: 20px; margin-left: 20px; margin-top: 20px; cursor: pointer;"
+                    class="fa-solid fa-xmark"></i>
+
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur <br>
+                adipisicing elit. Excepturi asperiores <br>
+                fugiat voluptate vitae iure in, velit <br>
+                debitis magni amet nostrum modi. Asperiores <br>
+                obcaecati velit, enim laudantium ipsum magni <br>
+                voluptatibus doloremque!
+            </p>
+            <div class="selector">
+                <button id="exit__tt">Quay lại</button>
+                <button><a href="https://www.tiktok.com/@khaquy2209">Đi đến tiktok</a></button>
+            </div>
+        </div>
+
+        </label>
+
+    </div>
+
+</body>
+
+</html>
