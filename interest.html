@@ -17,231 +17,124 @@
         height: 100vh;
         width: 100%;
         background-color: #081C29;
+        font-family: Arial, sans-serif;
     }
 
     .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .menu__pc {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        color: #249DCF;
-    }
-
-    .menu__pc__main {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
+        padding: 20px;
     }
 
-    .menu__pc__main li {
+    .menu_interest {
+        background-color: #232D36;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .menu__pc ul {
         list-style: none;
-        font-size: 20px;
-        font-family: Arial;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu__pc ul li {
+        color: #ffffff;
+        font-size: 1.2em;
         cursor: pointer;
     }
 
-    #percent__favourite,
-    #percent__skill,
-    #percent__prize {
-        display: inline-block;
-        width: 200px;
-        height: 20px;
-        border-radius: 7px;
-        background-color: #ffff;
-        position: relative;
-        margin-bottom: -6px;
+    .menu__pc ul li:hover {
+        color: #14A76C;
     }
 
-    .sport__tile__favourite,
-    .sport__tile__skill,
-    .sport__tile__raSan,
-    .sport__tile__prize {
-        display: flex;
-        margin: 20px 0;
+    .sport,
+    .music {
+        background-color: #1E1F26;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        color: #ffffff;
     }
 
-    #percent__favourite p {
-        display: inline-block;
-        width: 150px;
-        height: 20px;
-        background-color: #249DCF;
-        position: absolute;
-        border-radius: 7px;
-        left: 0;
-        top: -79%;
-        text-align: center;
-    }
-
-    #percent__skill p,
-    #percent__favourite p,
-    #sport__tile__prize p {
-        animation: percent 0.6s linear;
-        transform-origin: left;
-    }
-
-    #percent__skill p {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background-color: #249DCF;
-        position: absolute;
-        border-radius: 7px;
-        left: 0;
-        top: -79%;
-        text-align: center;
-
-    }
-
-    #percent__prize p {
-        display: inline-block;
-        width: 0px;
-        height: 20px;
-        background-color: #249DCF;
-        position: absolute;
-        border-radius: 7px;
-        left: 0;
-        top: -79%;
-        text-align: center;
+    .sport__title h1,
+    .music h1 {
+        font-size: 1.8em;
+        color: #14A76C;
+        margin-bottom: 10px;
     }
 
     .form {
-        width: 600px;
+        background-color: #28343E;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
     }
 
-    .form__football,
-    .form__music {
-        font-size: 20px;
-        color: #249DCF;
+    .form legend {
+        color: #14A76C;
+        font-size: 1.4em;
+        margin-bottom: 10px;
     }
 
-
-
-    .sport__title i {
-        animation: spring 2s infinite linear;
-        color: #ffff;
+    .progress-bar {
+        background-color: #374047;
+        height: 30px;
+        border-radius: 5px;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        color: #ffffff;
     }
 
-
-
-    .menu__pc__main li:hover {
-        animation: fly 1s infinite linear;
+    .label {
+        font-size: 1.2em;
     }
 
-    .direction__imga,
-    .SonTung__imga {
-        width: 100px;
+    .song {
+        display: flex;
+        align-items: center;
+        background-color: #374047;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .song img {
+        width: 50px;
         height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
     }
 
-    .direction__imga img,
-    .SonTung img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        margin-top: 3px;
-    }
-
-    .direction p,
-    .SonTung p {
-        width: 300px;
-    }
-
-    .direction,
-    .SonTung {
-        display: flex;
-        border: 2px solid #249DCF;
-        margin: 20px 0;
-    }
-
-    .direction__name,
-    .SonTung__name {
-        line-height: 0.3;
-        margin-top: -7px;
-        padding: 0 20px;
-        color: #249DCF;
-    }
-
-    .stop_star {
-        margin-top: 13px;
-        padding: 0 20px;
-        font-size: 25px;
+    .song .play-icon {
+        margin-left: auto;
         cursor: pointer;
+        color: #ffffff;
     }
 
-    .music {
-        display: flex;
-        margin-top: 30px;
+    .song .play-icon i {
+        font-size: 1.5em;
     }
 
-    .content_music {
-        font-size: 20px;
-        font-family: Arial;
-        color: #249DCF;
+    .song .play-icon i:hover {
+        color: #14A76C;
     }
 
-    .listMusic {
-        margin-top: -27px;
+    audio {
+        display: none;
     }
 
-    .content_music li {
-        line-height: 1.5;
-    }
-
-    .stop_star i {}
-
-    @keyframes spring {
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-    @keyframes fly {
-
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-5px);
-        }
-    }
-
-    @keyframes percent {
-
-
-        from {
-            transform: scaleX(0);
-        }
-
-        to {
-            transform: scaleX(1);
-        }
-    }
-
-    @media (max-width: 600px) {
-
-        /* CSS cho các thiết bị di động */
-        .menu__pc {
-            display: none;
-        }
-
-        .sport__title {
-            width: 100%;
-            padding: 0;
-        }
-
-        .music {
+    @media (max-width: 768px) {
+        .menu__pc ul {
             flex-direction: column;
         }
 
-        h1 {
-            text-align: center;
+        .menu__pc ul li {
+            padding: 10px 0;
         }
     }
 </style>
@@ -250,11 +143,10 @@
     <div class="container">
         <div class="menu_interest">
             <div class="menu__pc">
-                <ul class=menu__pc__main>
+                <ul class="menu__pc__main">
                     <li id="sport">Sport
                         <i class="fa-solid fa-baseball"></i>
                     </li>
-
                     <li id="music">Music
                         <i class="fa-solid fa-music"></i>
                     </li>
@@ -269,31 +161,31 @@
         </div>
         <div class="sport">
             <div class="sport__title">
-                <h1 style="text-align: center;">About Sport <i class="fa-solid fa-baseball"></i></h1>
+                <h1>About Sport <i class="fa-solid fa-baseball"></i></h1>
                 <form class="form">
                     <fieldset>
-                        <legend class="form__football">FootBall <i class="fa-solid fa-baseball"></i></legend>
+                        <legend class="form__football">Football <i class="fa-solid fa-baseball"></i></legend>
                         <div class="sport__tile__favourite">
-                            <span style="color: #249DCF; width: 200px;">Mức độ Yêu thích</span>
-                            <span id="percent__favourite">
+                            <span class="label">Mức độ Yêu thích</span>
+                            <span class="progress-bar" id="percent__favourite">
                                 <p></p>
                             </span>
                         </div>
                         <div class="sport__tile__skill">
-                            <span style="color: #249DCF; width: 200px;">Kỹ năng</span>
-                            <span id="percent__skill">
+                            <span class="label">Kỹ năng</span>
+                            <span class="progress-bar" id="percent__skill">
                                 <p></p>
                             </span>
                         </div>
                         <div class="sport__tile__raSan">
-                            <span style="color: #249DCF; width: 200px; width: 200px;">Tỉ lệ ra sân</span>
-                            <span id="percent__skill">
+                            <span class="label">Tỉ lệ ra sân</span>
+                            <span class="progress-bar" id="percent__rasan">
                                 <p></p>
                             </span>
                         </div>
                         <div class="sport__tile__prize">
-                            <span style="color: #249DCF; width: 200px; width: 200px;">Giải thưởng</span>
-                            <span id="percent__prize">
+                            <span class="label">Giải thưởng</span>
+                            <span class="progress-bar" id="percent__prize">
                                 <p></p>
                             </span>
                         </div>
@@ -301,62 +193,54 @@
                 </form>
             </div>
         </div>
-        <h1 style="text-align: center;">About Music <i class="fa-solid fa-music"></i></h1>
-
         <div class="music">
-            <div class="music__tile">
-                <form class="form">
-                    <fieldset>
-                        <legend class="form__music">Music <i class="fa-solid fa-music"></i></legend>
-                        <div class="sport__tile__favourite">
-                            <span style="color: #249DCF; width: 200px;">Thể loại</span>
-                            <span id="percent__favourite">
-                                <p>Nhạc trẻ</p>
-                            </span>
-                        </div>
-                        <div class="sport__tile__skill">
-                            <span style="color: #249DCF; width: 200px;">Thích hát</span>
-                            <span id="percent__skill">
-                                <p></p>
-                            </span>
-                        </div>
-                        <div class="sport__tile__raSan">
-                            <span style="color: #249DCF; width: 200px; width: 200px;">Giọng ca</span>
-                            <span id="percent__skill">
-                                <p></p>
-                            </span>
-                        </div>
-                        <div class="sport__tile__prize">
-                            <span style="color: #249DCF; width: 200px;">Giải thưởng</span>
-                            <span id="percent__prize">
-                                <p></p>
-                            </span>
-                        </div>
-                    </fieldset>
-                    <form action="">
-                        <fieldset style="margin-top: 20px; height: 252px;">
-                            <legend class="form__music">Thói quen</legend>
-                            <div class="content_music">
-                                <ul>
-                                    <li>Thích nghe nhạc trước khi ngủ</li>
-                                    <li>Nghe nhạc vào mỗi sáng thức dậy</li>
-                                    <li>Thích nghe nhạc và uống coffee</li>
-                                    <li>Vừa học bài vừa nghe nhạc</li>
-                                    <li>Buồn thì nghe nhạc</li>
-                                </ul>
-                            </div>
-                        </fieldset>
-                    </form>
-
-            </div>
+            <h1>About Music <i class="fa-solid fa-music"></i></h1>
+            <form class="form">
+                <fieldset>
+                    <legend class="form__music">Music <i class="fa-solid fa-music"></i></legend>
+                    <div class="sport__tile__favourite">
+                        <span class="label">Thể loại</span>
+                        <span class="progress-bar" id="percent__favourite">
+                            <p>Nhạc trẻ</p>
+                        </span>
+                    </div>
+                    <div class="sport__tile__skill">
+                        <span class="label">Thích hát</span>
+                        <span class="progress-bar" id="percent__skill">
+                            <p></p>
+                        </span>
+                    </div>
+                    <div class="sport__tile__raSan">
+                        <span class="label">Giọng ca</span>
+                        <span class="progress-bar" id="percent__rasan">
+                            <p></p>
+                        </span>
+                    </div>
+                    <div class="sport__tile__prize">
+                        <span class="label">Giải thưởng</span>
+                        <span class="progress-bar" id="percent__prize">
+                            <p></p>
+                        </span>
+                    </div>
+                </fieldset>
+                <fieldset class="music-habits">
+                    <legend class="form__music">Thói quen</legend>
+                    <ul>
+                        <li>Thích nghe nhạc trước khi ngủ</li>
+                        <li>Nghe nhạc vào mỗi sáng thức dậy</li>
+                        <li>Thích nghe nhạc và uống coffee</li>
+                        <li>Vừa học bài vừa nghe nhạc</li>
+                        <li>Buồn thì nghe nhạc</li>
+                    </ul>
+                </fieldset>
             </form>
             <div class="listMusic">
                 <form class="form">
                     <fieldset>
                         <legend>
-                            <h4 style="font-size: 20px; color: #249DCF;">Một số bài hát yêu thích</h4>
+                            <h4>Favorite Songs</h4>
                         </legend>
-                        <div class=" direction">
+                        <div class="song direction">
                             <div class="direction__imga">
                                 <img src="Imager/direction.webp" alt="">
                             </div>
@@ -365,13 +249,11 @@
                                 <p>One Direction</p>
                             </div>
                             <div class="stop_star play-icon">
-                                <i class="fa-solid fa-play" class="play-icon"></i>
-                                <audio class="audio" src="music/perfect.mp3" type="audio/mp3" controls
-                                    style=" display: none;"></audio>
+                                <i class="fa-solid fa-play"></i>
+                                <audio class="audio" src="music/perfect.mp3" type="audio/mp3" controls></audio>
                             </div>
-
                         </div>
-                        <div class="direction">
+                        <div class="song direction">
                             <div class="direction__imga">
                                 <img src="Imager/h2k.jpg" alt="">
                             </div>
@@ -380,13 +262,12 @@
                                 <p>H2K</p>
                             </div>
                             <div class="stop_star play-icon">
-                                <i class="fa-solid fa-play" class="play-icon"></i>
+                                <i class="fa-solid fa-play"></i>
                                 <audio class="audio" src="music/h2k-cukak-remix-audio-lyrics-video.mp3" type="audio/mp3"
-                                    controls style=" display: none;"></audio>
+                                    controls></audio>
                             </div>
-
                         </div>
-                        <div class="SonTung">
+                        <div class="song SonTung">
                             <div class="SonTung__imga">
                                 <img src="Imager/Sontung.jpg" alt="">
                             </div>
@@ -395,13 +276,12 @@
                                 <p>Sơn Tùng MTP</p>
                             </div>
                             <div class="stop_star play-icon">
-                                <i class="fa-solid fa-play" class="play-icon"></i>
+                                <i class="fa-solid fa-play"></i>
                                 <audio class="audio" src="music/chung-ta-cua-hien-tai-son-tung-mtp-lyrics-video.mp3"
-                                    type="audio/mp3" controls style=" display: none;"></audio>
+                                    type="audio/mp3" controls></audio>
                             </div>
-
                         </div>
-                        <div class="direction">
+                        <div class="song direction">
                             <div class="direction__imga">
                                 <img src="Imager/queenOFtear.webp" alt="">
                             </div>
@@ -410,92 +290,60 @@
                                 <p>미안해 미워해 사랑해</p>
                             </div>
                             <div class="stop_star play-icon">
-                                <i class="fa-solid fa-play" class="play-icon"></i>
+                                <i class="fa-solid fa-play"></i>
                                 <audio class="audio"
                                     src="music/love-you-with-all-my-heart-mianhae-miweohae-saranghae.mp3"
-                                    type="audio/mp3" controls style=" display: none;"></audio>
+                                    type="audio/mp3" controls></audio>
                             </div>
-
                         </div>
-                        <div class="direction">
+                        <div class="song direction">
                             <div class="direction__imga">
                                 <img src="Imager/10Nam.jpg" alt="">
                             </div>
                             <div class="direction__name">
                                 <h3>10 ngàn năm</h3>
-                                <p> Prod. Duckie</p>
+                                <p>Prod. Duckie</p>
                             </div>
                             <div class="stop_star play-icon">
                                 <i class="fa-solid fa-play"></i>
                                 <audio class="audio" src="music/10-ngan-nam-prod-duckie-official-audio.mp3"
-                                    type="audio/mp3" controls style=" display: none;"></audio>
+                                    type="audio/mp3" controls></audio>
                             </div>
+                        </div>
                     </fieldset>
-
                 </form>
-
-
-
             </div>
         </div>
-
-    </div>
     </div>
     <script>
-        const audioElements = document.querySelectorAll('.audio');
-        const playIcons = document.querySelectorAll('.play-icon');
+        document.querySelectorAll('.play-icon').forEach((playIcon, i) => {
+            const audio = document.querySelectorAll('.audio')[i];
+            const icon = playIcon.querySelector('i');
 
-        playIcons.forEach((playIcon, i) => {
             playIcon.addEventListener('click', () => {
-                const audio = audioElements[i];
-                const icon = playIcon.querySelector('i');
-
                 if (audio.paused) {
-                    audioElements.forEach((audioEl, index) => {
+                    document.querySelectorAll('.audio').forEach((audioEl, index) => {
                         if (index !== i) {
                             audioEl.pause();
-                            const otherIcon = playIcons[index].querySelector('i');
-                            otherIcon.classList.remove('fa-pause');
-                            otherIcon.classList.add('fa-play');
+                            document.querySelectorAll('.play-icon i')[index].classList.replace('fa-pause', 'fa-play');
                         }
                     });
 
-                    // Phát bài hát được chọn
                     audio.play();
-                    icon.classList.remove('fa-play');
-                    icon.classList.add('fa-pause');
+                    icon.classList.replace('fa-play', 'fa-pause');
                 } else {
-                    // Tạm dừng bài hát được chọn
                     audio.pause();
-                    icon.classList.remove('fa-pause');
-                    icon.classList.add('fa-play');
+                    icon.classList.replace('fa-pause', 'fa-play');
                 }
             });
         });
 
-
-
-        // function checkScroll() {
-        //     var scrolledHeight = window.scrollY || document.documentElement.scrollTop;
-        //     if (scrolledHeight > 973) {
-        //         scrooll.style.display = 'block';
-        //         scrooll.classList.add('scroll__display');
-        //     } else {
-        //         scrooll.style.display = 'none';
-        //         scrooll.classList.remove('scroll__display');
-        //     }
-        // }
-        const sport = document.getElementById('sport');
-        const music = document.getElementById('music');
-        sport.addEventListener('click', () => {
-            document.querySelector('.sport').scrollIntoView({
-                behavior: 'smooth'
-            })
+        document.getElementById('sport').addEventListener('click', () => {
+            document.querySelector('.sport').scrollIntoView({ behavior: 'smooth' });
         });
-        music.addEventListener('click', () => {
-            document.querySelector('.music').scrollIntoView({
-                behavior: 'smooth'
-            })
+
+        document.getElementById('music').addEventListener('click', () => {
+            document.querySelector('.music').scrollIntoView({ behavior: 'smooth' });
         });
     </script>
 </body>
